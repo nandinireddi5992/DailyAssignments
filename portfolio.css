@@ -1,0 +1,211 @@
+/* GLOBAL */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #0d1117;
+    color: #fff;
+    overflow-x: hidden;
+}
+section {
+    padding: 80px 10%;
+}
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* NAVBAR */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: rgba(10, 15, 25, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 0 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #7db9ff;
+}
+
+/* Desktop Menu */
+.menu {
+    display: flex;
+    gap: 32px;
+}
+
+.menu a {
+    color: #cbd6ff;
+    font-size: 1rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu a:hover {
+    color: #82e8ff;
+    text-shadow: 0 0 10px #82e8ff;
+}
+
+/* Hamburger hidden by default (desktop) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #82d2ff;
+}
+
+/* HERO */
+header {
+    height: 100vh;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%;
+    background: linear-gradient(135deg, #0f1624, #121a2e, #192a46);
+}
+
+.hero-title {
+    font-size: 3.3rem;
+    color: #82c0ff;
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: #b8cfff;
+    max-width: 600px;
+    margin-top: 12px;
+}
+
+.hero-btn {
+    margin-top: 25px;
+    padding: 12px 26px;
+    background: #509bff;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: #6bb3ff;
+    box-shadow: 0 0 12px #6bb3ff;
+}
+
+/* ABOUT */
+.about-box {
+    background: #151c2f;
+    padding: 35px;
+    border-radius: 12px;
+    line-height: 1.7;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill {
+    background: #1b2438;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: .3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 18px #4ea1ff;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0a0f1a;
+}
+
+footer .socials a {
+    margin: 0 12px;
+    font-size: 1.3rem;
+    color: #9ab6ff;
+    transition: .3s;
+}
+
+footer .socials a:hover {
+    color: #6bb3ff;
+}
+
+/* ------------------------------ */
+/* RESPONSIVE DESIGN */
+/* ------------------------------ */
+
+/* TABLET (768–1023px) */
+@media (max-width: 1023px) {
+    header {
+        padding-left: 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE (≤767px) */
+@media (max-width: 767px) {
+
+    /* Hamburger visible */
+    .hamburger {
+        display: block;
+    }
+
+    /* Menu hidden until clicked */
+    .menu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #0f1627;
+        flex-direction: column;
+        display: none; 
+        padding: 20px 0;
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 12px 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Hero section text smaller */
+    .hero-title {
+        font-size: 2.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Skills → 1 column */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
